@@ -169,7 +169,6 @@ if selected_menu == "PENETAPAN KADAR":
         st.subheader ("Penetapan Kadar Asam Asetat dalam cuka makan", divider='violet')
         st.write('Reaksi yang terjadi:')
         st.write('CH₃COOH + NaOH → CH₃COONa + H₂O')
-        st.latex(r''' % (b/v) CH₃COOH = \frac{Volume NaOH X N NaOH X BE CH₃COOH X 10-3 }{Volume Sampel} ''')
         st.write('---')
 
         titran = st.number_input('Masukkan volume NaOH  (mL)')
@@ -233,7 +232,6 @@ if selected_menu == "PENETAPAN KADAR":
         st.subheader ("Penetapan Kadar Besi dalam Sampel Garam Besi secara Permanganometri", divider='violet')
         st.write('Reaksi yang terjadi:')
         st.write('MnO4− + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O')
-        st.latex(r''' ''')
         st.write('---')
 
         titran = st.number_input('Masukkan volume KMnO₄ (mL)')
@@ -260,7 +258,6 @@ if selected_menu == "PENETAPAN KADAR":
         st.write('Reaksi yang terjadi:')
         st.write('Ca(OCl)₂ + 2H₂SO₄ + 4KI → CaSO₄ + 2KCl + 2H₂O + 2I₂ + 2K₂SO₄')
         st.write('I₂ + 2Na₂S₂O₃ → 2NaI + Na₂S₄O₆ ')
-        st.latex(r''' ''')
         st.write('---')
 
         titran = st.number_input('Masukkan volume Tio (mL)')
@@ -315,10 +312,6 @@ if selected_menu == "PENETAPAN KADAR":
 
     with KADAR6:
         st.subheader ("Penetapan Kesadahan Jumlah dalam Sampel Air secara Kompleksometri EDTA", divider='violet')
-        st.write('Reaksi yang terjadi:')
-        st.write(' ')
-        st.write('')
-        st.latex(r''' ''')
         st.write('---')
 
         titran = st.number_input('Masukkan volume EDTA (mL)')
