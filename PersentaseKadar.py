@@ -11,7 +11,6 @@ def halaman_utama():
     st.markdown('''Hello Teman-teman! :balloon:''')
     st.markdown('''Belajar kimia bersama Gerhat''')
     st.markdown('''Selamat datang di Kalkulator Kelompok 4''')
-    st.image('foto kadar.jpg)
     st.write('---')
     st.write('by : Kelompok 4')
     st.write('1. Destiana Diah Ayu Safitri (2360100)')
