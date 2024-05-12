@@ -2,7 +2,7 @@ import streamlit as st
 
 
 # Menampilkan judul dengan warna merah
-st.markdown("<h1 style='color: red;'>STANDARDISASI DAN PENETAPAN KADAR</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='color: blue;'>STANDARDISASI DAN PENETAPAN KADAR</h1>", unsafe_allow_html=True)
 
 #Tampilkan konten terkait dengan menu yang dipilih
 def halaman_utama():
