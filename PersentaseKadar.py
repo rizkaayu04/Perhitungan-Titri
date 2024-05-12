@@ -1,17 +1,5 @@
 import streamlit as st 
 
-# Menambahkan kode CSS untuk mengubah warna teks judul
-st.markdown(
-    """
-    <style>
-    /* CSS untuk mengubah warna teks judul */
-    .css-1v3fvcr {
-        color: red !important;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 # Menampilkan judul dengan warna merah
 st.markdown("<h1 style='color: red;'>STANDARDISASI DAN PENETAPAN KADAR</h1>", unsafe_allow_html=True)
@@ -19,7 +7,7 @@ st.markdown("<h1 style='color: red;'>STANDARDISASI DAN PENETAPAN KADAR</h1>", un
 #Tampilkan konten terkait dengan menu yang dipilih
 def halaman_utama():
     #Konten untuk HALAMAN UTAMA
-    st.header('Kalkulator Perhitungan Standardisasi danPenetapan Kadar',divider='rainbow')
+    st.header('Kalkulator Perhitungan Standardisasi dan Penetapan Kadar',divider='rainbow')
     st.markdown('''Hello Teman-teman! :balloon:''')
     st.markdown('''Belajar kimia bersama Gerhat''')
     st.markdown('''Selamat datang di Kalkulator Kelompok 4''')
