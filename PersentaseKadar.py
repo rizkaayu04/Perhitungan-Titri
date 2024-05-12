@@ -327,7 +327,7 @@ if selected_menu == "INFORMASI":
 
     with INFO1 :
         st.subheader('Bobot Molekul Senyawa Kimia')
-        ar_option = st.selectbox ('Pilih Jenis Unsur', ['None','Asam Oksalat (C₂H₂O₄.2H₂O)','Boraks (Na₂B₄O₇.10H₂O)','Asam Asetat (CH₃COOH)', 'Natrium Hidroksida (NaOH)','Natrium Karbonat (Na₂CO₃)','Besi (Fe)', 'Kalium Dikromat (K₂Cr₂O₇)','Klorida (Cl)','Kalsium Karbonat (CaCO₃)', ])
+        ar_option = st.selectbox ('Pilih Jenis Senyawa', ['None','Asam Oksalat (C₂H₂O₄.2H₂O)','Boraks (Na₂B₄O₇.10H₂O)','Asam Asetat (CH₃COOH)', 'Natrium Hidroksida (NaOH)','Natrium Karbonat (Na₂CO₃)','Besi (Fe)', 'Kalium Dikromat (K₂Cr₂O₇)','Klorida (Cl)','Kalsium Karbonat (CaCO₃)', ])
 
         if ar_option == 'Asam Oksalat (C₂H₂O₄.2H₂O)' :
             st.write('Bobot Molekul Asam Oksalat (C₂H₂O₄.2H₂O) adalah 126 mg⁄mmol   ')
