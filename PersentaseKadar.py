@@ -35,6 +35,7 @@ if selected_menu == "STANDARDISASI":
     
     with STANDARDISASI1:
         st.subheader ("Standardisasi Larutan Basa", divider='violet')
+        st.write('<span style="color:red">Bobot Molekul Boraks (Na₂B₄O₇.10H₂O) adalah 381.4 mg⁄mmol</span>', unsafe_allow_html=True)
         st.write('Reaksi yang terjadi:')
         st.write('C₂H₂O₄ + 2NaOH → Na₂C₂O₄ + 2H₂O')
         st.latex(r'''Normalitas NaOH =\frac{mg Asam Oksalat}{100/25 x mL NaOH x BE Asam Oksalat}''')
