@@ -263,20 +263,16 @@ if selected_menu == "PENETAPAN KADAR":
         st.write('---')
         
         titran = st.number_input('Masukkan volume  AgNO₃ (mL)')
-        titran_formatted = "{:.4f}".format(titran)
-        st.write('Volume  AgNO₃ adalah', titran_formatted)
+        st.write('Volume  AgNO₃ adalah', titran)
 
         Normalitas = st.number_input('Masukkan Normalitas  AgNO₃ (mgrek⁄mL)')
-        Normalitas_formatted = "{:.4f}".format(Normalitas)
-        st.write('Normalitas  AgNO₃ adalah', Normalitas_formatted)
+        st.write('Normalitas  AgNO₃ adalah', Normalitas)
 
         eki = st.number_input('Masukkan nilai Bobot Ekivaelen Cl  (mg⁄mgrek)')
-        eki_formatted = "{:.4f}".format(eki)
-        st.write('Bobot ekivalen Cl adalah', eki_formatted)
+        st.write('Bobot ekivalen Cl adalah', eki)
 
         titrat = st.number_input('Masukkan volume sampel yang mengandung Cl (mL)')
-        titrat_formatted = "{:.4f}".format(titrat)
-        st.write('Volume sampel adalah', titrat_formatted)
+        st.write('Volume sampel adalah', titrat)
 
         if st.button('Hitung Penetapan Kadar Klor dalam Sampel yang mengandung Cl'):
             persentase = (((titran * Normalitas * eki * 0.001) / titrat) * 100 )
