@@ -327,8 +327,6 @@ if selected_menu == "INFORMASI":
             st.write('Bobot Molekul Asam Oksalat (C₂H₂O₄.2H₂O) adalah 126 mg⁄mmol')
             st.write('Titrasi pada standardisasi larutan  KMnO₄ tidak menggunakan indikator karena  KMnO₄ dapat menjadi auto indikator')
             st.write('Perubahan warna yang terjadi yaitu "Larutan tidak berwarna → Larutan berwarna merah muda seulas" ')
-            
-            st.write('Bobot Molekul Asam Asetat (CH₃COOH) adalah 60 mg⁄mmol ')
 
         if ar_option == 'Standardisasi Larutan Tiosulfat' :
             st.write('Pada standardisasi Larutan Tiosulfat 0.1 N. Sampel yang digunakan adalah Kalium Dikromat (K₂Cr₂O₇) dan titran adalah larutan Tio')
@@ -339,7 +337,6 @@ if selected_menu == "INFORMASI":
             st.write('Setelah mencapai warna antara kuning-hijau, diberi indikator kanji sebanyak 1 drop')
             st.write('Perubahan warna yang terjadi yaitu "Larutan berwarna biru-ungu → Larutan berwarna hijau" ')
 
-        
         if ar_option == 'Standardisasi Larutan EDTA' :
             st.write('Pada standardisasi Larutan EDTA 0.01 M. Sampel yang digunakan adalah Kalsium Karbonat (CaCO₃) dan titran adalah larutan EDTA')
             st.write('Bobot Molekul Kalsium Karbonat (CaCO₃) adalah 100 mg⁄mmol ')
