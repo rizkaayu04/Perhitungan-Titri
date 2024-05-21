@@ -35,9 +35,9 @@ if selected_menu == "STANDARDISASI":
     
     with STANDARDISASI1:
         st.subheader ("Standardisasi Larutan Basa", divider='violet')
-        st.write('<span style="color:red">Bobot Molekul Boraks (Na₂B₄O₇.10H₂O) adalah 381.4 mg⁄mmol</span>', unsafe_allow_html=True)
+        st.write('<span style="color:red">Bobot Molekul Asam Oksalat (C₂H₂O₄.2H₂O) adalah 126 mg⁄mmol</span>', unsafe_allow_html=True)
         st.write('Reaksi yang terjadi:')
-        st.write('C₂H₂O₄ + 2NaOH → Na₂C₂O₄ + 2H₂O')
+        st.write('<span style="color:blue">C₂H₂O₄ + 2NaOH → Na₂C₂O₄ + 2H₂O </span>', unsafe_allow_html=True)
         st.latex(r'''Normalitas NaOH =\frac{mg Asam Oksalat}{100/25 x mL NaOH x BE Asam Oksalat}''')
         st.write('---')
 
@@ -57,8 +57,9 @@ if selected_menu == "STANDARDISASI":
 
     with STANDARDISASI2:
         st.subheader ("Standardisasi Larutan Asam",divider='violet')
+        st.write('<span style="color:red">Bobot Molekul Boraks (Na₂B₄O₇.10H₂O) adalah 381.4 mg⁄mmol</span>', unsafe_allow_html=True)
         st.write('Reaksi yang terjadi:')
-        st.write('Na₂B₄O₇.10H₂O + 2HCl → 2NaCl + 4H₃BO₃ +5H₂O ')
+        st.write('<span style="color:blue">Na₂B₄O₇.10H₂O + 2HCl → 2NaCl + 4H₃BO₃ +5H₂O </span>', unsafe_allow_html=True)
         st.latex(r'''Normalitas HCl =\frac{mg boraks}{100/25 x mL HCl x BE Boraks}''')
         st.write('---')
         bobot = st.number_input('Masukkan bobot Boraks (mg)')
@@ -77,8 +78,9 @@ if selected_menu == "STANDARDISASI":
 
     with STANDARDISASI3:
         st.subheader ("Standardisasi Larutan KMnO₄ dengan Asam Oksalat",divider='violet')
+        st.write('<span style="color:red">Bobot Molekul Asam Oksalat (C₂H₂O₄.2H₂O) adalah 126 mg⁄mmol</span>', unsafe_allow_html=True)
         st.write('Reaksi yang terjadi:')
-        st.write('MnO4− + 5C₂H₂O₄ + 6H⁺ → 2Mn²⁺ + 10CO₂ + 8H₂O ')
+        st.write('<span style="color:blue">MnO4− + 5C₂H₂O₄ + 6H⁺ → 2Mn²⁺ + 10CO₂ + 8H₂O</span>', unsafe_allow_html=True)
         st.latex(r'''Normalitas KMnO₄ =\frac{mg Asam Oksalat}{100/25 x mL KMnO₄ x BE Asam Oksalat}''')
         st.write('---')
 
@@ -98,9 +100,10 @@ if selected_menu == "STANDARDISASI":
 
     with STANDARDISASI4:
         st.subheader ("Standardisasi Larutan Tiosulfat 0,1 N dengan Bikromat secara Iodometri",divider='violet')
+        st.write('<span style="color:red">Bobot Molekul Kalium Dikromat (K₂Cr₂O₇) adalah 294 mg⁄mmol</span>', unsafe_allow_html=True)
         st.write('Reaksi yang terjadi:')
-        st.write('K₂Cr₂O₇ + 6KI + 14HCl → 8KCl + 2CrCl₃ + 7H₂O + 3I₂ ')
-        st.write('Na₂S₂O₃ + I₂ → Na₂S₄O₆ + 2NaI')
+        st.write('<span style="color:blue">'K₂Cr₂O₇ + 6KI + 14HCl → 8KCl + 2CrCl₃ + 7H₂O + 3I₂</span>', unsafe_allow_html=True)
+        st.write('<span style="color:blue">'Na₂S₂O₃ + I₂ → Na₂S₄O₆ + 2NaI</span>', unsafe_allow_html=True)
         st.latex(r'''Normalitas Na₂S₂O₃ =\frac{mg K₂Cr₂O₇}{100/25 x mL Tio x BE K₂Cr₂O₇}''')
         st.write('---')
 
@@ -120,10 +123,11 @@ if selected_menu == "STANDARDISASI":
 
     with STANDARDISASI5:
         st.subheader ("Standardisasi larutan EDTA 0,01 M dengan CaCO₃",divider='violet')
+        st.write('<span style="color:red">Bobot Molekul Kalsium Karbonat (CaCO₃) adalah 100 mg⁄mmol</span>', unsafe_allow_html=True)
         st.write('Reaksi yang terjadi:')
-        st.write('Mg²⁺ + HIn²⁻ → MgIn⁻ + H⁺')
-        st.write('Ca²⁺ + H₂Y²⁻ → CaY²⁻ + 2H⁺')
-        st.write('MgIn⁻ + H₂Y²⁻ → MgY²⁻ + HIn²⁻ + H⁺ ')
+        st.write('<span style="color:blue">Mg²⁺ + HIn²⁻ → MgIn⁻ + H⁺</span>', unsafe_allow_html=True)
+        st.write('<span style="color:blue">Ca²⁺ + H₂Y²⁻ → CaY²⁻ + 2H⁺</span>', unsafe_allow_html=True)
+        st.write('<span style="color:blue">MgIn⁻ + H₂Y²⁻ → MgY²⁻ + HIn²⁻ + H⁺</span>', unsafe_allow_html=True)
         st.latex(r'''Molaritas EDTA =\frac{mg CaCO₃}{100/25 x mL EDTA x BE CaCO₃}''')
         st.write('---')
 
@@ -147,6 +151,7 @@ if selected_menu == "PENETAPAN KADAR":
 
     with KADAR1:
         st.subheader ("Penetapan Kadar Asam Asetat dalam cuka makan", divider='violet')
+        st.write('Bobot Molekul Asam Asetat (CH₃COOH) adalah 60 mg⁄mmol ')
         st.write('Reaksi yang terjadi:')
         st.write('CH₃COOH + NaOH → CH₃COONa + H₂O')
         st.write('---')
@@ -170,6 +175,8 @@ if selected_menu == "PENETAPAN KADAR":
 
     with KADAR2:
         st.subheader ("Penetapan Kadar  NaOH dan Na₂CO₃ dalam Campuran Secara (WARDER) secara asidimetri", divider='violet')
+        st.write('Bobot Molekul Natrium Hidroksida (NaOH) adalah 40 mg⁄mmol ')
+        st.write('Bobot Molekul Natrium Karbonat (Na₂CO₃) adalah 106 mg⁄mmol ')
         st.write('Reaksi yang terjadi:')
         st.write('NaOH + HCl → NaCl + H₂O')
         st.write('Na₂CO₃ + HCl → NaHCO₃ + NaCl')
@@ -206,6 +213,7 @@ if selected_menu == "PENETAPAN KADAR":
 
     with KADAR3:
         st.subheader ("Penetapan Kadar Besi dalam Sampel Garam Besi secara Permanganometri", divider='violet')
+        st.write('Bobot Molekul Besi (Fe) adalah 56 mg⁄mmol ')
         st.write('Reaksi yang terjadi:')
         st.write('MnO4− + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O')
         st.write('---')
@@ -229,6 +237,7 @@ if selected_menu == "PENETAPAN KADAR":
 
     with KADAR4:
         st.subheader ("Penetapan Kadar Klor dalam Bahan Pemutih secara Iodometri", divider='violet')
+        st.write('Bobot Molekul Klorida (Cl) adalah 35,45 mg⁄mmol ')
         st.write('Reaksi yang terjadi:')
         st.write('Ca(OCl)₂ + 2H₂SO₄ + 4KI → CaSO₄ + 2KCl + 2H₂O + 2I₂ + 2K₂SO₄')
         st.write('I₂ + 2Na₂S₂O₃ → 2NaI + Na₂S₄O₆ ')
@@ -253,6 +262,7 @@ if selected_menu == "PENETAPAN KADAR":
 
     with KADAR5:
         st.subheader ("Penetapan Kadar Klor secara Argentometri", divider='violet')
+        st.write('Bobot Molekul Klorida (Cl) adalah 35,45 mg⁄mmol ')
         st.write('Reaksi yang terjadi melalui cara mohr:')
         st.write('Ag⁺ + Cl− →  AgCl')
         st.write('2Ag⁺ + CrO₄− →  Ag₂CrO₄')
@@ -282,6 +292,7 @@ if selected_menu == "PENETAPAN KADAR":
 
     with KADAR6:
         st.subheader ("Penetapan Kesadahan Jumlah dalam Sampel Air secara Kompleksometri EDTA", divider='violet')
+        st.write('Bobot Molekul Kalsium Karbonat (CaCO₃) adalah 100 mg⁄mmol ')
         st.write('---')
 
         titran = st.number_input('Masukkan volume EDTA (mL)')
