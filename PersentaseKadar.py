@@ -388,7 +388,7 @@ if selected_menu == "INFORMASI":
             st.write('Perubahan warna yang terjadi yaitu "Larutan berwarna hijau kekuningan → Endapan berwarna merah muda" ')
 
         if warna_option == 'Penetapan Kesadahan' :
-            st.write('Pada Penetapan Kesadahan jumlah, digunakan sampel Air sebanyak 50 mL dengan titran larutan AgNO₃ ')
+            st.write('Pada Penetapan Kesadahan jumlah, digunakan sampel Air sebanyak 50 mL dengan titran larutan EDTA ')
             st.write('Bobot Molekul Kalsium Karbonat (CaCO₃) adalah 100 mg⁄mmol ')
             st.write('Titrasi pada penetapan kesadahan jumlah dalam sampel air menggunakan indikator Erio-black-T sedikit')
             st.write('Perubahan warna yang terjadi yaitu "larutan berwarna merah anggur → larutan berwarna biru" ')
