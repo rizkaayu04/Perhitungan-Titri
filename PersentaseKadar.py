@@ -164,7 +164,7 @@ if selected_menu == "PENETAPAN KADAR":
 
         if st.button('Hitung Kadar Asam Asetat dalam Cuka Makan'):
             persentase = (((titran * Normalitas * ekivalen * 0.001) / titrat) * 50 * 100 )
-            persentase_formatted = "{:.4f}".format(persentase)
+            persentase_formatted = "{:.2f}".format(persentase)
             st.write(f'Nilai Persentase Kadar Asam Asetat dalam Cuka Makan adalah = {persentase_formatted} % (b/v)')
 
     with KADAR2:
