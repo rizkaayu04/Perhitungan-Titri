@@ -195,12 +195,12 @@ if selected_menu == "PENETAPAN KADAR":
 
         if st.button('Hitung Kadar Na₂CO₃ dalam campuran (WARDER)'):
             persentase = ((( (2 * ( titranb - titrana)) * Normalitas * eki * 0.001) / titrat) * 100 )
-            persentase_formatted = "{:.4f}".format(persentase)
+            persentase_formatted = "{:.2f}".format(persentase)
             st.write(f'Nilai Persentase Kadar Na₂CO₃ dalam Campuran (WARDER) secara asidimetri adalah = {persentase_formatted} % (b/v)')
 
         if st.button('Hitung Kadar NaOH dalam campuran (WARDER)'):
             persentase = ((( ((2 * titrana) - titranb) * Normalitas * ekivalen * 0.001) / titrat) * 100 )
-            persentase_formatted = "{:.4f}".format(persentase)
+            persentase_formatted = "{:.2f}".format(persentase)
             st.write(f'Nilai Persentase Kadar NaOH dalam Campuran (WARDER) secara asidimetri adalah = {persentase_formatted} % (b/v)')
 
     with KADAR3:
@@ -223,7 +223,7 @@ if selected_menu == "PENETAPAN KADAR":
 
         if st.button('Hitung Kadar Besi dalam Sampel Garam Besi'):
             persentase = (((titran * Normalitas * ekivalen * 0.001) / titrat) * 100 )
-            persentase_formatted = "{:.4f}".format(persentase)
+            persentase_formatted = "{:.2f}".format(persentase)
             st.write(f'Nilai Persentase Kadar Besi dalam Sampel Garam Besi adalah = {persentase_formatted} % (b/v)')
 
     with KADAR4:
@@ -247,7 +247,7 @@ if selected_menu == "PENETAPAN KADAR":
 
         if st.button('Hitung Penetapan Kadar Klor dalam Bahan Pemutih'):
             persentase = (((titran * Normalitas * ekivalen * 0.001) / titrat) * 20 * 100 )
-            persentase_formatted = "{:.4f}".format(persentase)
+            persentase_formatted = "{:.2f}".format(persentase)
             st.write(f'Nilai Persentase Kadar Klor dalam Bahan Pemutih secara Iodometri adalah = {persentase_formatted} % (b/v)')
 
     with KADAR5:
@@ -263,20 +263,24 @@ if selected_menu == "PENETAPAN KADAR":
         st.write('---')
         
         titran = st.number_input('Masukkan volume  AgNO₃ (mL)')
-        st.write('Volume  AgNO₃ adalah', titran)
+        titran_formatted = "{:.4f}".format(titran)
+        st.write('Volume  AgNO₃ adalah', titran_formatted)
 
         Normalitas = st.number_input('Masukkan Normalitas  AgNO₃ (mgrek⁄mL)')
-        st.write('Normalitas  AgNO₃ adalah', Normalitas)
+        Normalitas_formatted = "{:.4f}".format(Normalitas)
+        st.write('Normalitas  AgNO₃ adalah', Normalitas_formatted)
 
         eki = st.number_input('Masukkan nilai Bobot Ekivaelen Cl  (mg⁄mgrek)')
-        st.write('Bobot ekivalen Cl adalah', eki)
+        eki_formatted = "{:.4f}".format(eki)
+        st.write('Bobot ekivalen Cl adalah', eki_formatted)
 
         titrat = st.number_input('Masukkan volume sampel yang mengandung Cl (mL)')
-        st.write('Volume sampel adalah', titrat)
+        titrat_formatted = "{:.4f}".format(titrat)
+        st.write('Volume sampel adalah', titrat_formated)
 
         if st.button('Hitung Penetapan Kadar Klor dalam Sampel yang mengandung Cl'):
             persentase = (((titran * Normalitas * eki * 0.001) / titrat) * 100 )
-            persentase_formatted = "{:.4f}".format(persentase)
+            persentase_formatted = "{:.2f}".format(persentase)
             st.write(f'Nilai Persentase Kadar Klor secara Argentometri = {persentase_formatted} % (b/v)')
 
     with KADAR6:
