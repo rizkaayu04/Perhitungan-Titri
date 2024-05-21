@@ -102,7 +102,7 @@ if selected_menu == "STANDARDISASI":
         st.subheader ("Standardisasi Larutan Tiosulfat 0,1 N dengan Bikromat secara Iodometri",divider='violet')
         st.write('<span style="color:red">Bobot Molekul Kalium Dikromat (K₂Cr₂O₇) adalah 294 mg⁄mmol</span>', unsafe_allow_html=True)
         st.write('Reaksi yang terjadi:')
-        st.write('<span style="color:blue">'K₂Cr₂O₇ + 6KI + 14HCl → 8KCl + 2CrCl₃ + 7H₂O + 3I₂</span>', unsafe_allow_html=True)
+        st.write('<span style="color:blue">'K₂Cr₂O₇ + 6KI + 14HCl → 8KCl + 2CrCl₃ + 7H₂O + 3I₂ </span>', unsafe_allow_html=True)
         st.write('<span style="color:blue">'Na₂S₂O₃ + I₂ → Na₂S₄O₆ + 2NaI</span>', unsafe_allow_html=True)
         st.latex(r'''Normalitas Na₂S₂O₃ =\frac{mg K₂Cr₂O₇}{100/25 x mL Tio x BE K₂Cr₂O₇}''')
         st.write('---')
