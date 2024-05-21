@@ -387,7 +387,7 @@ if selected_menu == "INFORMASI":
             st.write('Titrasi pada penetapan kadar klor secara argentometri dengan cara fayans menggunakan indikator fluoresceion sebanyak 1-3 tetes')
             st.write('Perubahan warna yang terjadi yaitu "Larutan berwarna hijau kekuningan → Endapan berwarna merah muda" ')
 
-        if warna_option == 'Penetapan Kesadahan Jumlah dalam sampel Air' :
+        if warna_option == 'Penetapan Kesadahan' :
             st.write('Pada Penetapan Kesadahan jumlah, digunakan sampel Air sebanyak 50 mL dengan titran larutan AgNO₃ ')
             st.write('Bobot Molekul Kalsium Karbonat (CaCO₃) adalah 100 mg⁄mmol ')
             st.write('Titrasi pada penetapan kesadahan jumlah dalam sampel air menggunakan indikator Erio-black-T sedikit')
