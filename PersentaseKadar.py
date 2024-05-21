@@ -276,7 +276,7 @@ if selected_menu == "PENETAPAN KADAR":
 
         titrat = st.number_input('Masukkan volume sampel yang mengandung Cl (mL)')
         titrat_formatted = "{:.4f}".format(titrat)
-        st.write('Volume sampel adalah', titrat_formated)
+        st.write('Volume sampel adalah', titrat_formatted)
 
         if st.button('Hitung Penetapan Kadar Klor dalam Sampel yang mengandung Cl'):
             persentase = (((titran * Normalitas * eki * 0.001) / titrat) * 100 )
@@ -301,7 +301,7 @@ if selected_menu == "PENETAPAN KADAR":
 
         if st.button('Hitung Penetapan Kesadahan Jumlah dalam Sampel Air'):
             persentase = (((titran * Normalitas * ekivalen ) / titrat))
-            persentase_formatted = "{:.4f}".format(persentase)
+            persentase_formatted = "{:.2f}".format(persentase)
             st.write(f'Nilai  Kesadahan Jumlah dalam Sampel Air secara Kompleksometri EDTA adalah = {persentase_formatted} % (b/v)')
 
 
