@@ -2,17 +2,17 @@ import streamlit as st
 
 
 # Menampilkan judul dengan warna merah
-st.markdown("<h1 style='color: blue;'>STANDARDISASI DAN PENETAPAN KADAR MENURUT MATA KULIAH ANALISIS TITRIMETRI</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='color: lightblue;'>STANDARDISASI DAN PENETAPAN KADAR MENURUT MATA KULIAH ANALISIS TITRIMETRI</h1>", unsafe_allow_html=True)
 
 #Tampilkan konten terkait dengan menu yang dipilih
 def halaman_utama():
     #Konten untuk HALAMAN UTAMA
     st.header('Kalkulator Perhitungan Standardisasi dan Penetapan Kadar',divider='rainbow')
-    st.markdown('''Hello Teman-teman! :balloon:''')
-    st.markdown('''Belajar kimia bersama Gerhat''')
-    st.markdown('''Selamat datang di Kalkulator Kelompok 4''')
+    st.markdown('<span style="color:pink">Hello Teman-teman! :balloon:</span>', unsafe_allow_html=True)
+    st.markdown('<span style="color:pink">Belajar kimia bersama Gerhat</span>', unsafe_allow_html=True)
+    st.markdown('<span style="color:pink">Selamat datang di Kalkulator Kelompok 4</span>', unsafe_allow_html=True)
     st.write('---')
-    st.write('by : Kelompok 4')
+    st.write('Kelompok 4')
     st.write('1. Destiana Diah Ayu Safitri (2360100)')
     st.write('2. Gerhat Karol Sardo Jonathan Sitorus (2360131)')
     st.write('3. Rachel Tabita Gabe Sitorus (2360227)')
