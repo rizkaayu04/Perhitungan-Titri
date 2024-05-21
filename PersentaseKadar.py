@@ -307,7 +307,7 @@ if selected_menu == "INFORMASI":
 
     with INFO1 :
         st.subheader('Standardisasi')
-        st.write('Standardisasi adalah ')
+        st.write('Standardisasi adalah proses pembentukan standar teknis, standardisasi spesifikasi, standar cara uji, standar definisi, prosedur standar (atau praktik), dan lain-lain. Dapat disimpulkan standardisasi pada suatu produk ialah penetapan mutu yang selanjutnya menjadi pedoman untuk terpenuhinya keselarasan kuantitas yang menjamin kualitas produk.')
         ar_option = st.selectbox ('Pilih Jenis Standardisasi', ['None','Standardisasi Larutan Asam','Standardisasi Larutan Basa','Standardisasi Larutan KMnO₄','Standardisasi Larutan Tiosulfat','Standardisasi Larutan EDTA'])
 
         if ar_option == 'Standardisasi Larutan Asam' :
@@ -347,7 +347,8 @@ if selected_menu == "INFORMASI":
             st.write('Perubahan warna yang terjadi yaitu "larutan berwarna merah anggur → larutan berwarna biru" ')
 
     with INFO2 :
-        st.subheader('Perubahan Warna Selama Titrasi')
+        st.subheader('Penetapan Kadar')
+        st.write('Penetapan Kadar larutan adalah suatu pengukuran kandungan larutan yang berada di dalam bahan (sampel). Prinsip penetapan kadar dilakukan dengan cara yang tepat, seperti titrasi. Tujuan dari penetapan kadar larutan, yaitu memberikan batas minimal atau rentang besarnya kandungan larutan di dalam bahan.')
         warna_option = st.selectbox ('Pilih Jenis Titrasi', ['None','Penetapan Kadar Asam Asetat','Penetapan Kadar NaOH dan Na₂CO₃','Penetapan Kadar Besi','Penetapan Kadar Klor secara Iodometri','Penetapan Kadar Klor secara Argentometri','Penetapan Kesadahan' ])
 
         if warna_option == 'Penetapan Kadar Asam Asetat' :
