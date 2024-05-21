@@ -2,7 +2,7 @@ import streamlit as st
 
 
 # Menampilkan judul dengan warna merah
-st.markdown("<h1 style='color: blue;'>STANDARDISASI DAN PENETAPAN KADAR</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='color: blue;'>STANDARDISASI DAN PENETAPAN KADAR MENURUT MATA KULIAH ANALISIS TITRIMETRI</h1>", unsafe_allow_html=True)
 
 #Tampilkan konten terkait dengan menu yang dipilih
 def halaman_utama():
@@ -18,6 +18,7 @@ def halaman_utama():
     st.write('3. Rachel Tabita Gabe Sitorus (2360227)')
     st.write('4. Rizka Ayu Putri Aulia (2360245)')
     st.write('5. Shabiyyah Ayu Nailah Sekar (2360259)')
+    
 
 
 #Membuat sidebar menu
@@ -48,8 +49,6 @@ if selected_menu == "STANDARDISASI":
         ekivalen = st.number_input('Masukkan nilai BE(mg⁄mgrek)')
         st.write('bobot ekivalen Asam Oksalat adalah', ekivalen)
 
-        
-
         if st.button('Hitung Normalitas NaOH dalam standardisasi Basa dengan sampel Asam Oksalat'):
             persentase = (bobot / (4 * titran * ekivalen) )
             persentase_formatted = "{:.4f}".format(persentase)
@@ -69,8 +68,6 @@ if selected_menu == "STANDARDISASI":
 
         ekivalen = st.number_input('Masukkan nilai BE Boraks (mg⁄mgrek)')
         st.write('bobot ekivalen Boraks adalah', ekivalen)
-
-        
 
         if st.button('Hitung Normalitas HCl dalam standardisasi Asam dengan sampel Boraks'):
             persentase = (bobot / (4 * titran * ekivalen))
@@ -92,8 +89,6 @@ if selected_menu == "STANDARDISASI":
 
         ekivalen = st.number_input('Masukkan nilai BE asam oksalat (mg⁄mgrek)')
         st.write('bobot ekivalen Asam Oksalat adalah', ekivalen)
-
-        
 
         if st.button('Hitung Normalitas KMnO₄ dalam standardisasi larutan KMnO₄ dengan Asam Oksalat'):
             persentase = (bobot / (4 * titran * ekivalen))
@@ -117,8 +112,6 @@ if selected_menu == "STANDARDISASI":
         ekivalen = st.number_input('Masukkan nilai BE K₂Cr₂O₇ (mg⁄mgrek)')
         st.write('bobot ekivalen K₂Cr₂O₇ adalah', ekivalen)
 
-        
-
         if st.button('Hitung Normalitas Na₂S₂O₃ dalam standardisasi larutan Tio 0,1 N dengan K₂Cr₂O₇'):
             persentase = (bobot / (4 * titran * ekivalen))
             persentase_formatted = "{:.4f}".format(persentase)
@@ -141,8 +134,6 @@ if selected_menu == "STANDARDISASI":
 
         ekivalen = st.number_input('Masukkan nilai BM CaCO₃ (mg⁄mmol)')
         st.write('bobot molekul CaCO₃ adalah', ekivalen)
-
-        
 
         if st.button('Hitung Molaritas EDTA dalam standardisasi larutan EDTA 0,01 M dengan CaCO₃'):
             persentase = (bobot / (4 * titran * ekivalen))
@@ -171,12 +162,10 @@ if selected_menu == "PENETAPAN KADAR":
         titrat =  st.number_input('Masukkan volume sampel  (mL)')
         st.write('Volume sampel adalah', titrat)
 
-        
-
         if st.button('Hitung Kadar Asam Asetat dalam Cuka Makan'):
             persentase = (((titran * Normalitas * ekivalen * 0.001) / titrat) * 50 * 100 )
             persentase_formatted = "{:.4f}".format(persentase)
-            st.write(f'Nilai Persentase Kadar Asam Asetat dalam Cuka Makan adalah = {persentase_formatted}')
+            st.write(f'Nilai Persentase Kadar Asam Asetat dalam Cuka Makan adalah = {persentase_formatted} % (b/v)')
 
     with KADAR2:
         st.subheader ("Penetapan Kadar  NaOH dan Na₂CO₃ dalam Campuran Secara (WARDER) secara asidimetri", divider='violet')
@@ -204,17 +193,15 @@ if selected_menu == "PENETAPAN KADAR":
         titrat = st.number_input('Masukkan volume Sampel  (mL)')
         st.write('Volume sampel adalah', titrat)
 
-        
-
         if st.button('Hitung Kadar Na₂CO₃ dalam campuran (WARDER)'):
             persentase = ((( (2 * ( titranb - titrana)) * Normalitas * eki * 0.001) / titrat) * 100 )
             persentase_formatted = "{:.4f}".format(persentase)
-            st.write(f'Nilai Persentase Kadar Na₂CO₃ dalam Campuran (WARDER) secara asidimetri adalah = {persentase_formatted}')
+            st.write(f'Nilai Persentase Kadar Na₂CO₃ dalam Campuran (WARDER) secara asidimetri adalah = {persentase_formatted} % (b/v)')
 
         if st.button('Hitung Kadar NaOH dalam campuran (WARDER)'):
             persentase = ((( ((2 * titrana) - titranb) * Normalitas * ekivalen * 0.001) / titrat) * 100 )
             persentase_formatted = "{:.4f}".format(persentase)
-            st.write(f'Nilai Persentase Kadar NaOH dalam Campuran (WARDER) secara asidimetri adalah = {persentase_formatted}')
+            st.write(f'Nilai Persentase Kadar NaOH dalam Campuran (WARDER) secara asidimetri adalah = {persentase_formatted} % (b/v)')
 
     with KADAR3:
         st.subheader ("Penetapan Kadar Besi dalam Sampel Garam Besi secara Permanganometri", divider='violet')
@@ -234,12 +221,10 @@ if selected_menu == "PENETAPAN KADAR":
         titrat = st.number_input('Masukkan volume sampel garam besi (mL)')
         st.write('Volume sampel adalah', titrat)
 
-        
-
         if st.button('Hitung Kadar Besi dalam Sampel Garam Besi'):
             persentase = (((titran * Normalitas * ekivalen * 0.001) / titrat) * 100 )
             persentase_formatted = "{:.4f}".format(persentase)
-            st.write(f'Nilai Persentase Kadar Besi dalam Sampel Garam Besi adalah = {persentase_formatted}')
+            st.write(f'Nilai Persentase Kadar Besi dalam Sampel Garam Besi adalah = {persentase_formatted} % (b/v)')
 
     with KADAR4:
         st.subheader ("Penetapan Kadar Klor dalam Bahan Pemutih secara Iodometri", divider='violet')
@@ -260,12 +245,10 @@ if selected_menu == "PENETAPAN KADAR":
         titrat = st.number_input('Masukkan volume sampel pemutih (mL)')
         st.write('Volume sampel adalah', titrat)
 
-        
-
         if st.button('Hitung Penetapan Kadar Klor dalam Bahan Pemutih'):
             persentase = (((titran * Normalitas * ekivalen * 0.001) / titrat) * 20 * 100 )
             persentase_formatted = "{:.4f}".format(persentase)
-            st.write(f'Nilai Persentase Kadar Klor dalam Bahan Pemutih secara Iodometri adalah = {persentase_formatted}')
+            st.write(f'Nilai Persentase Kadar Klor dalam Bahan Pemutih secara Iodometri adalah = {persentase_formatted} % (b/v)')
 
     with KADAR5:
         st.subheader ("Penetapan Kadar Klor secara Argentometri", divider='violet')
@@ -291,12 +274,10 @@ if selected_menu == "PENETAPAN KADAR":
         titrat = st.number_input('Masukkan volume sampel yang mengandung Cl (mL)')
         st.write('Volume sampel adalah', titrat)
 
-        
-
         if st.button('Hitung Penetapan Kadar Klor dalam Sampel yang mengandung Cl'):
             persentase = (((titran * Normalitas * eki * 0.001) / titrat) * 100 )
             persentase_formatted = "{:.4f}".format(persentase)
-            st.write(f'Nilai Persentase Kadar Klor secara Argentometri = {persentase_formatted}')
+            st.write(f'Nilai Persentase Kadar Klor secara Argentometri = {persentase_formatted} % (b/v)')
 
     with KADAR6:
         st.subheader ("Penetapan Kesadahan Jumlah dalam Sampel Air secara Kompleksometri EDTA", divider='violet')
@@ -314,87 +295,86 @@ if selected_menu == "PENETAPAN KADAR":
         titrat = st.number_input('Masukkan volume sampel air (mL)')
         st.write('Volume sampel adalah', titrat)
 
-        
-
         if st.button('Hitung Penetapan Kesadahan Jumlah dalam Sampel Air'):
             persentase = (((titran * Normalitas * ekivalen ) / titrat))
             persentase_formatted = "{:.4f}".format(persentase)
-            st.write(f'Nilai  Kesadahan Jumlah dalam Sampel Air secara Kompleksometri EDTA adalah = {persentase_formatted}')
+            st.write(f'Nilai  Kesadahan Jumlah dalam Sampel Air secara Kompleksometri EDTA adalah = {persentase_formatted} % (b/v)')
+
 
 #Tampilan Bagian Informasi
 if selected_menu == "INFORMASI":
-    INFO1, INFO2 = st.tabs(['BM','Perubahan Warna'])
+    INFO1, INFO2 = st.tabs(['Standardisasi','Penetepan Kadar'])
 
     with INFO1 :
-        st.subheader('Bobot Molekul Senyawa Kimia')
-        ar_option = st.selectbox ('Pilih Jenis Senyawa', ['None','Asam Oksalat (C₂H₂O₄.2H₂O)','Boraks (Na₂B₄O₇.10H₂O)','Asam Asetat (CH₃COOH)', 'Natrium Hidroksida (NaOH)','Natrium Karbonat (Na₂CO₃)','Besi (Fe)', 'Kalium Dikromat (K₂Cr₂O₇)','Klorida (Cl)','Kalsium Karbonat (CaCO₃)', ])
+        st.subheader('Standardisasi')
+        st.write('Standardisasi adalah ')
+        ar_option = st.selectbox ('Pilih Jenis Standardisasi', ['None','Standardisasi Larutan Asam','Standardisasi Larutan Basa','Standardisasi Larutan KMnO₄','Standardisasi Larutan Tiosulfat','Standardisasi Larutan EDTA'])
 
-        if ar_option == 'Asam Oksalat (C₂H₂O₄.2H₂O)' :
-            st.write('Bobot Molekul Asam Oksalat (C₂H₂O₄.2H₂O) adalah 126 mg⁄mmol   ')
-
-        if ar_option == 'Boraks (Na₂B₄O₇.10H₂O)' :
-            st.write('Bobot Molekul Boraks (Na₂B₄O₇.10H₂O) adalah 381.4 mg⁄mmol ')
-
-        if ar_option == 'Asam Asetat (CH₃COOH)' :
-            st.write('Bobot Molekul Asam Asetat (CH₃COOH) adalah 60 mg⁄mmol ')
-
-        if ar_option == 'Natrium Hidroksida (NaOH)' :
-            st.write('Bobot Molekul Natrium Hidroksida (NaOH) adalah 40 mg⁄mmol ')
-
-        if ar_option == 'Natrium Karbonat (Na₂CO₃)' :
-            st.write('Bobot Molekul Natrium Karbonat (Na₂CO₃) adalah 106 mg⁄mmol ')
-
-        if ar_option == 'Besi (Fe)' :
-            st.write('Bobot Molekul Besi (Fe) adalah 56 mg⁄mmol ')
-
-        if ar_option == 'Kalium Dikromat (K₂Cr₂O₇)' :
-            st.write('Bobot Molekul Kalium Dikromat (K₂Cr₂O₇) adalah 294 mg⁄mmol ')
-
-        if ar_option == 'Klorida (Cl)' :
-            st.write('Bobot Molekul Klorida (Cl) adalah 35,45 mg⁄mmol ')
-
-        if ar_option == 'Kalsium Karbonat (CaCO₃)' :
-            st.write('Bobot Molekul Kalsium Karbonat (CaCO₃) adalah 100 mg⁄mmol ')
-
-    with INFO2 :
-        st.subheader('Perubahan Warna Selama Titrasi')
-        warna_option = st.selectbox ('Pilih Jenis Titrasi', ['None','Standardisasi Larutan Asam','Standardisasi Larutan Basa','Penetapan Kadar Asam Asetat', 'Penetapan Kadar NaOH dan Na₂CO₃','Standardisasi Larutan KMnO₄','Penetapan Kadar Besi', 'Standardisasi Larutan TioSulfat','Penetapan Kadar Klor secara Iodometri','Penetapan Kadar Klor secara Argentometri','Standardisasi larutan EDTA','Penetapan Kesadahan Jumlah dalam sampel Air' ])
-
-        if warna_option == 'Standardisasi Larutan Asam' :
+        if ar_option == 'Standardisasi Larutan Asam' :
+            st.write('Pada standardisasi Larutan Asam (HCl 0.1 N) Sampel yang digunakan adalah Boraks dan titran adalah HCl')
+            st.write('Bobot Molekul Boraks (Na₂B₄O₇.10H₂O) adalah 381.4 mg⁄mmol')
             st.write('Titrasi pada standardisasi larutan asam (HCl) menggunakan indikator Metil Merah (MM) sebanyak 2 tetes')
             st.write('Perubahan warna yang terjadi yaitu "larutan berwarna kuning → larutan berwarna merah jingga" ')
 
-        if warna_option == 'Standardisasi Larutan Basa' :
+        if ar_option == 'Standardisasi Larutan Basa' :
+            st.write('Pada standardisasi Larutan Basa (NaOH 0.1 N). Sampel yang digunakan adalah Asam Oksalat dan titran adalah NaOH')
+            st.write('Bobot Molekul Asam Oksalat (C₂H₂O₄.2H₂O) adalah 126 mg⁄mmol')
             st.write('Titrasi pada standardisasi larutan basa (NaOH) menggunakan indikator Fenolftalein (PP) sebanyak 1 tetes')
             st.write('Perubahan warna yang terjadi yaitu "larutan tidak berwarna → larutan berwarna merah muda seulas" ')
-
-        if warna_option == 'Penetapan Kadar Asam Asetat' :
-            st.write('Titrasi pada penetapan kadar asam asetat menggunakan indikator Fenolftalein (PP) sebanyak 1 tetes')
-            st.write('Perubahan warna yang terjadi yaitu "larutan tidak berwarna → larutan berwarna merah muda seulas" ')
-
-        if warna_option == 'Penetapan Kadar NaOH dan Na₂CO₃' :
-            st.write('Titrasi pada penetapan kadar NaOH dan Na₂CO₃ menggunakan 2 indikator Fenolftalein (PP) dan Sindur Metil (SM)')
-            st.write('Indikator PP diberi sebanyak 1 tetes dan dilakukan titrasi sampai mengalami perubahan warna')
-            st.write('Perubahan warna yang terjadi yaitu "larutan berwarna merah muda seulas → larutan tidak berwarna" ')
-            st.write('Indikator SM ditambahkan sebanyak 2 tetes, apabila larutan sudah tidak berwarna')
-            st.write('Perubahan warna yang terjadi yaitu "Larutan berwarna merah → Larutan berwarna kuning" ')
-
-        if warna_option == 'Standardisasi Larutan KMnO₄' :
+            
+        if ar_option == 'Standardisasi Larutan KMnO₄' :
+            st.write('Pada standardisasi Larutan KMnO₄ 0.1 N. Sampel yang digunakan adalah Asam Oksalat dan titran adalah KMnO₄')
+            st.write('Bobot Molekul Asam Oksalat (C₂H₂O₄.2H₂O) adalah 126 mg⁄mmol')
             st.write('Titrasi pada standardisasi larutan  KMnO₄ tidak menggunakan indikator karena  KMnO₄ dapat menjadi auto indikator')
             st.write('Perubahan warna yang terjadi yaitu "Larutan tidak berwarna → Larutan berwarna merah muda seulas" ')
+            
+            st.write('Bobot Molekul Asam Asetat (CH₃COOH) adalah 60 mg⁄mmol ')
 
-        if warna_option == 'Penetapan Kadar Besi' :
-            st.write('Titrasi pada penetapan kadar besi tidak menggunakan indikator karena KMnO₄ dapat menjadi auto indikator')
-            st.write('Perubahan warna yang terjadi yaitu "Larutan tidak berwarna → Larutan berwarna merah muda seulas" ')
-
-        if warna_option == 'Standardisasi Larutan TioSulfat' :
+        if ar_option == 'Standardisasi Larutan Tiosulfat' :
+            st.write('Pada standardisasi Larutan Tiosulfat 0.1 N. Sampel yang digunakan adalah Kalium Dikromat (K₂Cr₂O₇) dan titran adalah larutan Tio')
+            st.write('Bobot Molekul Kalium Dikromat (K₂Cr₂O₇) adalah 294 mg⁄mmol ')
             st.write('Titrasi pada standardisasi larutan tiosulfat menggunakan indikator KI - Kanji')
             st.write('KI diberi sebanyak 10 mL sebelum dilakukan titrasi')
             st.write('Perubahan warna yang terjadi yaitu "Larutan berwarna coklat → Larutan berwarna kuning-hijau" ')
             st.write('Setelah mencapai warna antara kuning-hijau, diberi indikator kanji sebanyak 1 drop')
             st.write('Perubahan warna yang terjadi yaitu "Larutan berwarna biru-ungu → Larutan berwarna hijau" ')
 
+        
+        if ar_option == 'Standardisasi Larutan EDTA' :
+            st.write('Pada standardisasi Larutan EDTA 0.01 M. Sampel yang digunakan adalah Kalsium Karbonat (CaCO₃) dan titran adalah larutan EDTA')
+            st.write('Bobot Molekul Kalsium Karbonat (CaCO₃) adalah 100 mg⁄mmol ')
+            st.write('Titrasi pada standardisasi larutan EDTA menggunakan indikator Erio-black-T sedikit')
+            st.write('Perubahan warna yang terjadi yaitu "larutan berwarna merah anggur → larutan berwarna biru" ')
+
+    with INFO2 :
+        st.subheader('Perubahan Warna Selama Titrasi')
+        warna_option = st.selectbox ('Pilih Jenis Titrasi', ['None','Penetapan Kadar Asam Asetat','Penetapan Kadar NaOH dan Na₂CO₃','Penetapan Kadar Besi','Penetapan Kadar Klor secara Iodometri','Penetapan Kadar Klor secara Argentometri','Penetapan Kesadahan' ])
+
+        if warna_option == 'Penetapan Kadar Asam Asetat' :
+            st.write('Pada Penetapan Kadar Asam Asetat, digunakan sampel Cuka Makan sebanyak 25 mL dengan titran larutan NaOH')
+            st.write('Bobot Molekul Asam Asetat (CH₃COOH) adalah 60 mg⁄mmol ')
+            st.write('Titrasi pada penetapan kadar asam asetat menggunakan indikator Fenolftalein (PP) sebanyak 1 tetes')
+            st.write('Perubahan warna yang terjadi yaitu "larutan tidak berwarna → larutan berwarna merah muda seulas" ')
+
+        if warna_option == 'Penetapan Kadar NaOH dan Na₂CO₃' :
+            st.write('Pada Penetapan Kadar NaOH dan Na₂CO₃, digunakan sampel WARDER sebanyak 25 mL dengan titran larutan HCl')
+            st.write('Bobot Molekul Natrium Hidroksida (NaOH) adalah 40 mg⁄mmol ')
+            st.write('Bobot Molekul Natrium Karbonat (Na₂CO₃) adalah 106 mg⁄mmol ')
+            st.write('Titrasi pada penetapan kadar NaOH dan Na₂CO₃ menggunakan 2 indikator Fenolftalein (PP) dan Sindur Metil (SM)')
+            st.write('Indikator PP diberi sebanyak 1 tetes dan dilakukan titrasi sampai mengalami perubahan warna')
+            st.write('Perubahan warna yang terjadi yaitu "larutan berwarna merah muda seulas → larutan tidak berwarna" ')
+            st.write('Indikator SM ditambahkan sebanyak 2 tetes, apabila larutan sudah tidak berwarna')
+            st.write('Perubahan warna yang terjadi yaitu "Larutan berwarna merah → Larutan berwarna kuning" ')
+
+        if warna_option == 'Penetapan Kadar Besi' :
+            st.write('Pada Penetapan Kadar Besi, digunakan sampel Garam Besi sebanyak 25 mL dengan titran larutan KMnO₄')
+            st.write('Bobot Molekul Besi (Fe) adalah 56 mg⁄mmol ')
+            st.write('Titrasi pada penetapan kadar besi tidak menggunakan indikator karena KMnO₄ dapat menjadi auto indikator')
+            st.write('Perubahan warna yang terjadi yaitu "Larutan tidak berwarna → Larutan berwarna merah muda seulas" ')
+
         if warna_option == 'Penetapan Kadar Klor secara Iodometri' :
+            st.write('Pada Penetapan Kadar Klor secara Iodometri, digunakan sampel Pemutih sebanyak 25 mL dengan titran larutan Tio')
+            st.write('Bobot Molekul Klorida (Cl) adalah 35,45 mg⁄mmol ')
             st.write('Titrasi pada penetapan kadar klor secara iodometri menggunakan indikator KI - Kanji')
             st.write('KI diberi sebanyak 10 mL sebelum dilakukan titrasi')
             st.write('Perubahan warna yang terjadi yaitu "Larutan berwarna coklat → Larutan berwarna hijau-kuning" ')
@@ -402,16 +382,16 @@ if selected_menu == "INFORMASI":
             st.write('Perubahan warna yang terjadi yaitu "Larutan berwarna biru tua → Larutan tidak berwarna" ')
 
         if warna_option == 'Penetapan Kadar Klor secara Argentometri' :
+            st.write('Pada Penetapan Kadar Klor secara Argentometri, digunakan sampel mengandung Cl sebanyak 10 mL dengan titran larutan AgNO₃ ')
+            st.write('Bobot Molekul Klorida (Cl) adalah 35,45 mg⁄mmol ')
             st.write('Titrasi pada penetapan kadar klor secara argentometri dengan cara mohr menggunakan indikator K₂Cr₂O₄ sebanyak 5 tetes')
             st.write('Perubahan warna yang terjadi yaitu "Larutan berwarna kuning → Endapan merah bata" ')
             st.write('Titrasi pada penetapan kadar klor secara argentometri dengan cara fayans menggunakan indikator fluoresceion sebanyak 1-3 tetes')
             st.write('Perubahan warna yang terjadi yaitu "Larutan berwarna hijau kekuningan → Endapan berwarna merah muda" ')
 
-        if warna_option == 'Standardisasi larutan EDTA' :
-            st.write('Titrasi pada standardisasi larutan EDTA menggunakan indikator Erio-black-T sedikit')
-            st.write('Perubahan warna yang terjadi yaitu "larutan berwarna merah anggur → larutan berwarna biru" ')
-
         if warna_option == 'Penetapan Kesadahan Jumlah dalam sampel Air' :
+            st.write('Pada Penetapan Kesadahan jumlah, digunakan sampel Air sebanyak 50 mL dengan titran larutan AgNO₃ ')
+            st.write('Bobot Molekul Kalsium Karbonat (CaCO₃) adalah 100 mg⁄mmol ')
             st.write('Titrasi pada penetapan kesadahan jumlah dalam sampel air menggunakan indikator Erio-black-T sedikit')
             st.write('Perubahan warna yang terjadi yaitu "larutan berwarna merah anggur → larutan berwarna biru" ')
 
